@@ -1,0 +1,19 @@
+{
+  "name": "mnemonic-decode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mn_decode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoonMoonDogo/paper-turtle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoonMoonDogo/paper-turtle/issues"
+  },
+  "homepage": "https://github.com/MoonMoonDogo/paper-turtle#readme"
+}
