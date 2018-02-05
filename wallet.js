@@ -30,7 +30,21 @@ var genwallet = function(lang) {
   // mnemonic_widget.innerHTML = mnemonic;
   //qr=new QRCode(address_qr_widget, {correctLevel:QRCode.CorrectLevel.L});
   //qr.makeCode("turtlecoin:"+keys.public_addr);
-}
+};
+
+var mnemonic_to_keys = function(mn_seed) {
+    var seed = mn_decode(mn_seed, null);
+    var words = getStringWords(mn_encode(seed, null));
+    var keys = create_address(seed);
+    var spend = keys.spend.sec;
+    var view = keys.view.sec;
+    document.getElementById("private_spend_input").value = keys.spend.sec;
+    document.getElementById("private_view_input").value = keys.view.sec;
+};
+
+var keys_to_mnemonic = function(spend, view) {
+    document.getElementById("mnemonic_input").value = mn_encode(spend);
+};
 
 /*
 previous_button_text = "";

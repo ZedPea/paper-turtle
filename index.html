@@ -40,6 +40,14 @@
     </div> -->
 
     <div class="col-12 d-print-none">
+        <h3>Mnemonic seed &lt;-&gt; private keys</h3>
+            Mnemonic seed: <input id="mnemonic_input" type="text" style="width:100%;" value=""/><br /><br />
+            <button class="btn btn-default" onclick="js:mnemonic_to_keys(document.getElementById('mnemonic_input').value);" type="button" value="mnemonic_to_keys">Generate private keys from mnemonic seed</button><br><br>
+            Private spend key: <input id="private_spend_input" type="text" style="width:100%;" value=""/><br /><br />
+            Private view key: <input id="private_view_input" type="text" style="width:100%;" value=""/><br /><br />
+            <button class="btn btn-default" onclick="js:keys_to_mnemonic(document.getElementById('private_spend_input').value, document.getElementById('private_view_input').value);" type="button" value="keys_to_menmonic">Generate mnemonic seed from private keys</button><br><br>
+
+
       <h3>Step 1</h3>
       <p>For extra security, type a few random letters, words, numbers, or symbols below. Press "Generate Wallet" when you are done. </p>
       <input id="user_entropy_widget" type="text" style="width:100%;" value="" placeholder="  The more random stuff you type in this box, the better your keys will be." /><br /><br />
