@@ -6,7 +6,7 @@ var genkeys = function(lang, additional_entropy) {
   var seed = cnUtil.sc_reduce32(poor_mans_kdf(additional_entropy + cnUtil.rand_32()));
   var passPhrase = mn_encode(seed, lang !== null && lang !== undefined ? lang : "english");
   var words = getStringWords(passPhrase);
-  seed = CryptoJS.SHA256(salt + words.join(' ')).toString();
+  //seed = CryptoJS.SHA256(salt + words.join(' ')).toString();
   return cnUtil.create_address(seed);
 };
 
